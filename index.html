@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Jokester</h1>
+
+        <label for="language"></label>
+        <select id="language">
+            <option value="en">English</option>
+            <option value="cz">Česky</option>
+        </select>
+     </header>
+
+    <h2 id="categories-title">Categories:</h2>
+<ul class="categories">
+  <li class="any"><h3 data-key="any">Any</h3></li>
+  <li class="misc"><h3 data-key="misc">Misc</h3></li>
+  <li class="dark"><h3 data-key="dark">Dark</h3></li>
+  <li class="programming"><h3 data-key="programming">Programming</h3></li>
+  <li class="pun"><h3 data-key="pun">Pun</h3></li>
+  <li class="spooky"><h3 data-key="spooky">Spooky</h3></li>
+  <li class="christmas"><h3 data-key="christmas">Christmas</h3></li>
+</ul>
+
+<h2 id="flags-title">Flags:</h2>
+<ul class="flags">
+  <li data-key="nsfw">nsfw</li>
+  <li data-key="religious">religious</li>
+  <li data-key="political">political</li>
+  <li data-key="racist">racist</li>
+  <li data-key="sexist">sexist</li>
+  <li data-key="explicit">explicit</li>
+</ul>
+<p>*Select flags you want to blacklist</p>
+
+<div class="joke-box">
+  <p class="joke"></p>
+</div>
+
+    <script src="main.js"></script>
+</body>
+</html>
+
