@@ -63,4 +63,106 @@ p{
 
 .joke {
   font-size:200%;
+  /* border: 2px solid black;
+  border-radius: 10px;
+  display: inline-block; */
 }
+
+
+.search-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 40px;
+}
+
+.keyword {
+  width: 250px;
+  padding: 12px 16px;
+  border: none;
+  border-radius: 25px;
+  background: rgba(255, 255, 255, 0.8); 
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  font-size: 16px;
+  text-align: center;
+  outline: none;
+  transition: 0.3s;
+}
+
+.keyword:focus {
+  background: rgba(255, 255, 255, 0.95);
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.15);
+}
+
+
+.search-button {
+  margin-top: 12px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 20px;
+  background: #b97ddf; 
+  color: white;
+  font-size: 15px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.search-button:hover {
+  background: #9b5fc1;
+  transform: scale(1.05);
+}
+
+
+img {
+  height: 30%;
+  width: 20%;
+}
+
+#corner-jester {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 5%;
+  height: 10%;
+  cursor: pointer;
+  z-index: 1000;
+  transition: transform 0.3s ease;
+}
+
+#corner-jester:hover {
+  transform: scale(1.1) rotate(-5deg);
+}
+
+#loading-jester {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 200px;
+  animation: jesterPrank 6s ease-in-out forwards;
+}
+
+@keyframes jesterPrank {
+  0%   { transform: translate(-50%, -50%) scale(1); }
+  20%  { transform: translate(-50%, -50%) scale(1.05) rotate(-2deg); }
+  40%  { transform: translate(-50%, -50%) scale(1.05) rotate(2deg); }
+  60%  { transform: translate(-50%, -50%) scale(1.1); }
+  80%  { transform: translate(-50%, -50%) scale(1) rotate(0deg); }
+  100% { transform: translate(-50%, -50%) scale(1) rotate(0deg); }
+}
+
+
+#rickroll-video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 640px;
+  height: 360px;
+  border-radius: 12px;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.4);
+  display: none;
+}
+
+

@@ -8,7 +8,7 @@
 </head>
 <body>
     <header>
-        <h1>Jokester</h1>
+        <img src="./gallery/Jester-header-final.png" alt="sasek jester">
 
         <label for="language"></label>
         <select id="language">
@@ -27,6 +27,14 @@
   <li class="spooky"><h3 data-key="spooky">Spooky</h3></li>
   <li class="christmas"><h3 data-key="christmas">Christmas</h3></li>
 </ul>
+<div class="search-container">
+  <input type="text" placeholder="Enter a keyword" class="keyword"/>
+  <button class="search-button" onclick="Search()">Search</button>
+</div>
+
+<div class="joke-box">
+  <p class="joke"></p>
+</div>
 
 <h2 id="flags-title">Flags:</h2>
 <ul class="flags">
@@ -39,9 +47,7 @@
 </ul>
 <p>*Select flags you want to blacklist</p>
 
-<div class="joke-box">
-  <p class="joke"></p>
-</div>
+<img src="./gallery/sneaky-jester.png" id="corner-jester" alt="schovany sasek"/>
 
     <script src="main.js"></script>
 </body>

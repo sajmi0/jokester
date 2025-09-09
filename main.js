@@ -96,4 +96,34 @@ classSelector((selectedClass) => {
     });
 });
 
+//vyhledavani keywordu
+function Search() {
+    let inputValue = document.querySelector(".keyword").value;
 
+    fetch(`https://v2.jokeapi.dev/joke/Any?contains=${inputValue}`)
+        .then(res => res.json())
+        .then(data => {
+            let jokeText = "";
+
+            if(inputValue === ""){
+              jokeText = "Please enter a keyword";
+            } else if (data.type === "twopart") {
+                jokeText = `${data.setup} ${data.delivery}`;
+            } else if (data.type === "single") {
+                jokeText = data.joke;
+            } else {
+                jokeText = "No joke found 😢";
+            }
+
+            document.querySelector(".joke").textContent = jokeText;
+        })
+        .catch(err => {
+            console.error(err);
+            document.querySelector(".joke").textContent = "Error fetching joke!";
+        });
+}
+
+document.getElementById("corner-jester").addEventListener('click', () => {
+  window.location.href = "/secret.html";
+  
+})
